@@ -173,3 +173,35 @@ Here is the step-by-step implementation for index.html based on your approvals.S
   </ul>
 </section>
 Record in ai-log.mdBe sure to paste this implementation plan into ai-log.md on your feature branch to fulfill Part 3 (Step 6) of the assignment.Human Code Review Table (Part 4, Step 9)Use this filled table for your code review submission:File or RegionWhat the AI ChangedWhat I VerifiedChange Made After Reviewindex.html (Header)Added "Roy Gartley", CS role title, and inline SVG avatar placeholder.Verified all personal phone/address details remain hidden and profile links target valid profiles.Noneindex.html (Projects)Inserted project cards for Resistor Band Scanner and Bingo Bot with custom SVG cards.Verified SVG cards render properly and external links include target="_blank".Added explicit aria-label tags for screen reader accessibility.style.css (Layout)Verified grid image scales dynamically.Tested container widths at 375px viewport to ensure zero horizontal scrollbars.None
+
+### STEP 7
+Step 7: Review of the AI Plan
+Parts of the Plan Accepted:
+
+Updating header and sidebar details with my real name ("Roy Gartley"), title ("Computer Science Student"), and active social profiles (LinkedIn and GitHub).
+
+Replacing sample template project cards with two dedicated project listings (Resistor Band Scanner and Bingo Bot).
+
+Using standalone, lightweight SVG vector graphics for project card thumbnails instead of missing or broken external image links.
+
+Preserving existing layout structure and JavaScript navigation attributes (data-page, data-nav-link) to ensure tab switching works smoothly.
+
+Parts Revised:
+
+Replaced default contact details (email, phone number, birthday) with minimal, privacy-compliant information (location: Michigan, USA) to prevent exposing private personal data on a public repository.
+
+Expanded the default placeholder SVG cards with custom vector drawings and embedded aria-label tags for enhanced accessibility.
+
+Risks & Assumptions Identified by AI:
+
+Assumption: The original vCard system is a pure front-end HTML/CSS/JS template requiring no backend, build steps, or server dependencies.
+
+Risk: Wide grid cards or static elements could break mobile responsiveness on smaller screen widths (e.g., 375px viewports).
+
+Risk: Hardcoded navigation or missing target="_blank" attributes could force users off the portfolio site when clicking social profile links.
+
+Risks or Assumptions Failed to Identify:
+
+Accessibility & Screen Readers: The initial plan did not account for replacing missing icon font dependencies or adding explicit ARIA roles/labels for SVG element placeholders.
+
+JavaScript Tab Selectors: The initial plan risked stripping template-specific data attributes (data-page="about", data-nav-link), which would break the underlying tab navigation scripts in script.js.
